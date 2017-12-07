@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+
+{% block title %} Hire Us {% endblock %}
+
+{% block body %}
+<br><br>
+<div class='container'>
+<div class='col-sm-8 col-sm-offset-2'>
+    <br><br><br>
+    <h1> {{ title }} </h1>
+    {% if confirm_order %}
+    <h3> {{ confirm_order }} </h3>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="GWNG7LF8573CJ">
+        <input type="hidden" name="on0" value="Cost">COST<input type="text" class= "form-control" name="os0" maxlength="200">
+        <br>
+        <input type="submit" value="Make Payment" name="submit" class="btn btn-primary">
+    </form>
+    <br>
+    <p>Thank you for choosing Marvel Writers, we really value you, our dear customer. We will start working on your
+        order as soon as humanly possible. Meanwhile, feel free to contact us in case of anything.
+        We would love to hear from you and we really value customer feedback.</p>        
+    
+    {% endif %}
+
+
+    {% if form %}
+    <form method="POST" action=""> {% csrf_token %}
+        {{ form|crispy }}
+        <h5><b>Please ensure that you have filled in the correct details</b></h5>
+        <h5>Send any necessary files to: <em>marvelwriters89@gmail.com</em></h5>
+        <input type="submit" value="submit form" class="btn btn-primary">
+    </form>
+    {% endif %}
+</div>
+</div>
+<br>
+
+{% endblock %}

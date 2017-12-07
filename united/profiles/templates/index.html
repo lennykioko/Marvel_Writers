@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block title %} Home {% endblock %}
+
+
+{% block body %}
+<header class="masthead">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 id="homeHeading">MARVEL WRITERS</h1>
+            <hr>
+            <p>Your Reliable Writing Solutions Partner</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="{%url 'hire' %}">HIRE US</a>
+        </div>
+    </div>
+</header>
+
+<section>
+    
+    <div class="container">
+        <div class="card-deck">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <div class="card-block">
+                    <h3 class="card-title">Non-Plagiarized Papers</h3>
+                    <p class="card-text">Relying on the most credible sources and scrupulous research,
+                              we complete well-thought, plagiarism-free written papers of competitive quality.</p>
+                </div>                  
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <div class="card-block">
+                    <h3 class="card-title">Experienced &amp; Native Writers</h3>
+                    <p class="card-text">Our cohesive group of well-trained, 
+                            intelligent Master’s and PhD writers is familiar with
+                            all types of academic papers and can cope with them efficiently.</p>
+                </div>                 
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <div class="card-block">
+                    <h3 class="card-title">Timely Delivery</h3>
+                    <p class="card-text">With respect to our clients, we strive to prepare every paper
+                            by the deadline and deliver it within the specified time. You can count on us.</p>
+                </div>                  
+            </div>
+                        
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <div class="card-block">
+                    <h3 class="card-title">Customer Support</h3>
+                    <p class="card-text">Customer convenience and satisfaction are our major 
+                            principles and we do our best for everyone to get prompt 
+                            answers to their questions. Feel free to contact us anytime.</p>
+                </div>  
+            </div> 
+        </div>                                  
+    </div>
+
+</section>
+
+{% endblock %}

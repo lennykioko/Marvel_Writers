@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %} Contact {% endblock %}
+
+{% block body %}
+<div class='container'>
+<div class='col-sm-6 col-sm-offset-3'>
+    <br><br><br><br><br>
+    <h1> {{ title }} </h1>
+    {% if confirm_message %}
+    <p> {{ confirm_message }} </p>
+    {% endif %}
+
+    {% if form %}
+    <form method="POST" action=""> {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="submit form" class="btn btn-primary">
+    </form>
+    {% endif %}
+</div>
+</div>
+<br>
+
+{% endblock %}
