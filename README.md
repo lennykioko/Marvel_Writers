@@ -13,7 +13,7 @@ with all the functionality to take an order, allow for users to contact the owne
 
 ## Installation 
 Clone this GitHub repo:
->`$ git clone https://github.com/lennykioko/Marvel_Writers.git
+>`$ git clone https://github.com/lennykioko/Marvel_Writers.git`
 
 cd into the created folder and install a [virtual environment](https://virtualenv.pypa.io/en/stable/)
 
