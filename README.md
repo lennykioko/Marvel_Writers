@@ -38,4 +38,4 @@ I have used Django as my web framework of choice.
 Lenny Kioko.
 
 ## License.
-The API uses an MIT license.
+The App uses an MIT license.
